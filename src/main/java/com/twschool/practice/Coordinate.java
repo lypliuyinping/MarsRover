@@ -1,21 +1,36 @@
 package com.twschool.practice;
 
-    public class Coordinate {
-        int x;
-        int y;
-        public Coordinate(int x, int y){
-            this.x=x;
-            this.y=y;
+class MarsRoverPostion {
+
+    private  String direction;
+    private  int coordinateY;
+    private int coordinateX;
+
+    public MarsRoverPostion(int coordinateX, int coordinateY, String direction) {
+
+        this.coordinateX = coordinateX;
+        this.coordinateY = coordinateY;
+        this.direction =direction;
+    }
+
+        public void setCoordinateX(int coordinateX){
+            this.coordinateX=coordinateX;
         }
-        public void setPoint(int x,int y){
-            this.x=x;
-            this.y=y;
+        public void setCoordinateY(int coordinateY){
+            this.coordinateY=coordinateY;
         }
-        public int getX()
+        public void setDirection(String direction){
+            this.direction=direction;
+        }
+        public int getcoordinateX()
         {
-            return x;
+            return coordinateX;
         }
-        public int getY(){
-            return y;
+        public int getCoordinateY(){
+            return coordinateY;
+        }
+
+        public String getDirection(){
+            return direction;
         }
 }
