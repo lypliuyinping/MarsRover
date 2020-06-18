@@ -94,4 +94,6 @@ public class FizzBuzzTest {
         //then
         Assert.assertEquals("FizzBuzzWhizz", result);
     }
+
+
 }
