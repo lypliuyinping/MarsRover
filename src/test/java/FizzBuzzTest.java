@@ -72,12 +72,12 @@ public class FizzBuzzTest {
         Assert.assertEquals("FizzWhizz", result);
     }
     @Test
-    public void  should_return_BuzzWhiZZ_when_ginven_number_35(){
+    public void  should_return_BuzzWhiZZ_when_can_be_divided_by_number_70(){
         //given
         FizzBuzz fizzBuzz=new FizzBuzz();
 
         //when
-        String result=fizzBuzz.say(35);
+        String result=fizzBuzz.say(70);
 
         //then
         Assert.assertEquals("BuzzWhizz", result);
@@ -94,6 +94,26 @@ public class FizzBuzzTest {
         //then
         Assert.assertEquals("FizzBuzzWhizz", result);
     }
+    @Test
+    public void  should_return_FiZZBuzzWhiZZ_when_ginven_number_13(){
+        //given
+        FizzBuzz fizzBuzz=new FizzBuzz();
 
+        //when
+        String result=fizzBuzz.say(13);
 
+        //then
+        Assert.assertEquals("Fizz", result);
+    }
+    @Test
+    public void  should_return_FiZZBuzzWhiZZ_when_ginven_number_15(){
+        //given
+        FizzBuzz fizzBuzz=new FizzBuzz();
+
+        //when
+        String result=fizzBuzz.say(15);
+
+        //then
+        Assert.assertEquals("BuzzWhizz", result);
+    }
 }
