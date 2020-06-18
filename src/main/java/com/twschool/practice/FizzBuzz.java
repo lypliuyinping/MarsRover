@@ -3,19 +3,19 @@ package com.twschool.practice;
 public class FizzBuzz {
     public String say(int number) {
         if(number % 3 ==0 && number % 5 ==0 && number % 7 ==0){
-            return "FiZZBuzzWhiZZ";
+            return "FizzBuzzWhizz";
         }else if (number % 3 ==0 && number % 5 ==0){
             return "FizzBuzz";
         } else if(number % 3 ==0 && number % 7 ==0){
-            return "FiZZWhiZZ";
+            return "FizzWhizz";
         } else if(number % 5 ==0 && number % 7 ==0){
-            return "BuzzWhiZZ";
+            return "BuzzWhizz";
         } else if(number % 3 ==0){
-            return "FiZZ";
+            return "Fizz";
         }else if (number % 5 ==0){
-            return "BiZZ";
+            return "Buzz";
         }else if (number % 7 ==0){
-            return "WhiZZ";
+            return "Whizz";
         }
         return "1";
     }

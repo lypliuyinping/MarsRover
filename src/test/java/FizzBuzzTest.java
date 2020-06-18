@@ -24,7 +24,7 @@ public class FizzBuzzTest {
         String result=fizzBuzz.say(3);
 
         //then
-        Assert.assertEquals("FiZZ", result);
+        Assert.assertEquals("Fizz", result);
     }
 
     @Test
@@ -36,7 +36,7 @@ public class FizzBuzzTest {
         String result=fizzBuzz.say(5);
 
         //then
-        Assert.assertEquals("BiZZ", result);
+        Assert.assertEquals("Buzz", result);
     }
     @Test
     public void  should_return_Whizz_when_ginven_number_7(){
@@ -47,7 +47,7 @@ public class FizzBuzzTest {
         String result=fizzBuzz.say(7);
 
         //then
-        Assert.assertEquals("WhiZZ", result);
+        Assert.assertEquals("Whizz", result);
     }
     @Test
     public void  should_return_FizzBuzz_when_ginven_number_15(){
@@ -69,7 +69,7 @@ public class FizzBuzzTest {
         String result=fizzBuzz.say(21);
 
         //then
-        Assert.assertEquals("FiZZWhiZZ", result);
+        Assert.assertEquals("FizzWhizz", result);
     }
     @Test
     public void  should_return_BuzzWhiZZ_when_ginven_number_35(){
@@ -80,7 +80,7 @@ public class FizzBuzzTest {
         String result=fizzBuzz.say(35);
 
         //then
-        Assert.assertEquals("BuzzWhiZZ", result);
+        Assert.assertEquals("BuzzWhizz", result);
     }
 
     @Test
@@ -92,6 +92,6 @@ public class FizzBuzzTest {
         String result=fizzBuzz.say(105);
 
         //then
-        Assert.assertEquals("FiZZBuzzWhiZZ", result);
+        Assert.assertEquals("FizzBuzzWhizz", result);
     }
 }
