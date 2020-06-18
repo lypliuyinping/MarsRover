@@ -139,4 +139,16 @@ public class MarsRoverTest {
         Assert.assertEquals(0,marsRoverPostion.getcoordinateX());
         Assert.assertEquals(-1,marsRoverPostion.getCoordinateY());
     }
+    @Test
+    public void  should_return_coordinate_1x_0y_direction_E_given_coordinate_x0_y0_direction_E_command_M(){
+        //given
+        MarsRoverPostion marsRoverPostion =new MarsRoverPostion(0,0,"E");
+        MarsRover marsRover =new MarsRover(marsRoverPostion);
+        //when
+        marsRover.receive("M");
+        //then
+        Assert.assertEquals("E",marsRoverPostion.getDirection());
+        Assert.assertEquals(1,marsRoverPostion.getcoordinateX());
+        Assert.assertEquals(0,marsRoverPostion.getCoordinateY());
+    }
 }
