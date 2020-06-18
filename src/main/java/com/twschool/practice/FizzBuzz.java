@@ -2,7 +2,9 @@ package com.twschool.practice;
 
 public class FizzBuzz {
     public String say(int number) {
-        if (number % 5 ==0 && number % 3 ==0){
+        if(number % 3 ==0 && number % 5 ==0 && number % 7 ==0){
+            return "FiZZBuzzWhiZZ";
+        }else if (number % 3 ==0 && number % 5 ==0){
             return "FizzBuzz";
         } else if(number % 3 ==0 && number % 7 ==0){
             return "FiZZWhiZZ";
