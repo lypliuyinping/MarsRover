@@ -61,4 +61,15 @@ public class GuessNumberTest {
 
         Assert.assertEquals("0A3B",result);
     }
+    @Test
+    public void  should_return_0A0B_when_compare_with_5678_given_answer_1234(){
+        //given
+        Answer answer =new Answer("1 2 3 4");
+
+        //when
+        String result = answer.check("5 6 7 8");
+        //then
+
+        Assert.assertEquals("0A0B",result);
+    }
 }
