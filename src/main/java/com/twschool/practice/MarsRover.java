@@ -6,6 +6,7 @@ public class MarsRover {
         this.marsRoverPostion=marsRoverPostion;
     }
     public void receive(String command) {
+        
         if(command.equals("L")){
             if(marsRoverPostion.getDirection().equals("N")){
                 marsRoverPostion.setDirection("W");
