@@ -27,4 +27,15 @@ public class GuessNumberTest {
         Assert.assertEquals("1A3B",result);
     }
 
+    @Test
+    public void  should_return_1A1B_when_compare_with_1456_given_answer_1234(){
+        //given
+        Answer answer =new Answer("1 2 3 4");
+
+        //when
+        String result = answer.check("1 4 5 6");
+        //then
+
+        Assert.assertEquals("1A1B",result);
+    }
 }
