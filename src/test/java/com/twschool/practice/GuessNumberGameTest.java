@@ -27,4 +27,15 @@ public class GuessNumberGameTest {
         //then
         Assert.assertEquals(GameStatus.SUCCESS,gameStatus);
     }
+    @Test
+    public void should_return_failed_when_times_6_userAnswerString_4567_given_game_answerString_1234(){
+        //given
+        GuessNumberAnswer  guessNumberAnswer =new GuessNumberAnswer("1 2 3 4");
+        GuessNumberGame guessNumberGame =new GuessNumberGame(guessNumberAnswer);
+        guessNumberGame.guess("4 5 6 7");
+        //when
+        GameStatus gameStatus=guessNumberGame.getStatus();
+        //then
+        Assert.assertEquals(GameStatus.FAILED,gameStatus);
+    }
 }
