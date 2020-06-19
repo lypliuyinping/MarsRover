@@ -1,12 +1,11 @@
 package com.twschool.practice;
 
 public class MarsRoverPostion {
-    private  String direction;
+    private  Direction direction;
     private  int coordinateY;
     private int coordinateX;
 
-    public MarsRoverPostion(int coordinateX, int coordinateY, String direction) {
-
+    public MarsRoverPostion(int coordinateX, int coordinateY, Direction direction) {
         this.coordinateX = coordinateX;
         this.coordinateY = coordinateY;
         this.direction =direction;
@@ -18,7 +17,7 @@ public class MarsRoverPostion {
     public void setCoordinateY(int coordinateY){
         this.coordinateY=coordinateY;
     }
-    public void setDirection(String direction){
+    public void setDirection(Direction direction){
         this.direction=direction;
     }
     public int getcoordinateX()
@@ -29,43 +28,27 @@ public class MarsRoverPostion {
         return coordinateY;
     }
 
-    public String getDirection(){
+    public Direction getDirection(){
         return direction;
     }
-
+    //移动
     public void move() {
-        if(getDirection().equals("N")){
+        if(getDirection().equals(Direction.N)){
             setCoordinateY(getCoordinateY()+1);
-        }else  if(getDirection().equals("W")){
+        }else  if(getDirection().equals(Direction.W)){
             setCoordinateX(getcoordinateX()-1);
-        }else if(getDirection().equals("S")){
+        }else if(getDirection().equals(Direction.S)){
             setCoordinateY(getCoordinateY()-1);
-        }else if(getDirection().equals("E")){
+        }else if(getDirection().equals(Direction.E)){
             setCoordinateX(getcoordinateX()+1);
         }
     }
-
+    //右转
     public void turnRight() {
-        if(getDirection().equals("N")){
-            setDirection("E");
-        }else if(getDirection().equals("W")){
-            setDirection("N");
-        }else if(getDirection().equals("S")){
-            setDirection("W");
-        }else if(getDirection().equals("E")){
-            setDirection("S");
-        }
+      setDirection(getDirection().rightDirection());
     }
-
+    //左转
     public void turnLeft() {
-        if(getDirection().equals("N")){
-            setDirection("W");
-        }else if(getDirection().equals("W")){
-            setDirection("S");
-        }else if(getDirection().equals("S")){
-            setDirection("E");
-        }else if(getDirection().equals("E")){
-            setDirection("N");
-        }
+        setDirection(getDirection().leftDirection());
     }
 }

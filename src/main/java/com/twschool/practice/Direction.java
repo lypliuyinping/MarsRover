@@ -14,7 +14,7 @@ public enum  Direction {
     },S {
         @Override
         public Direction leftDirection() {
-            return Direction.W;
+            return Direction.E;
         }
 
         @Override
