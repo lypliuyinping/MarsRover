@@ -14,4 +14,17 @@ public class GuessNumberGameTest {
         //then
         Assert.assertEquals("4A0B",result);
     }
+    @Test
+    public void should_return_success_when_userAnswerString_1234_given_game_answerString_1234(){
+        //given
+        GuessNumberAnswer  guessNumberAnswer =new GuessNumberAnswer("1 2 3 4");
+        GuessNumberGame guessNumberGame =new GuessNumberGame(guessNumberAnswer);
+        guessNumberGame.guess("1 2 3 4");
+
+        //when
+        GameStatus  gameStatus=guessNumberGame.getStatus();
+
+        //then
+        Assert.assertEquals(GameStatus.SUCCESS,gameStatus);
+    }
 }
