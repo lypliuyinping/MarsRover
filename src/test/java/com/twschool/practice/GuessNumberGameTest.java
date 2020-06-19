@@ -38,4 +38,16 @@ public class GuessNumberGameTest {
         //then
         Assert.assertEquals(GameStatus.FAILED,gameStatus);
     }
+
+    @Test
+    public void should_return_continue_when_userAnswerString_1537_given_game_answerString_1234(){
+        //given
+        GuessNumberAnswer  guessNumberAnswer =new GuessNumberAnswer("1 2 3 4");
+        GuessNumberGame guessNumberGame =new GuessNumberGame(guessNumberAnswer);
+        guessNumberGame.guess("1 5 3 7");
+        //when
+        GameStatus gameStatus=guessNumberGame.getStatus();
+        //then
+        Assert.assertEquals(GameStatus.CONTINUE,gameStatus);
+    }
 }
